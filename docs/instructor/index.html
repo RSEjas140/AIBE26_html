@@ -331,8 +331,8 @@ you need any help, please ask a demonstrator.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>If you did <strong>not</strong> attend the Introduction to Python
-sessions, you will need to install Python and an interface for running
+<p>If you did not attend the Introduction to Python sessions, you will
+need to install Python, Conda or Miniforge, and an interface for running
 code. We recommend using Jupyter Notebook. You can find the installation
 instructions <a href="https://swcarpentry.github.io/python-novice-inflammation/" class="external-link">here</a>.</p>
 <p>If you need any help, please ask a demonstrator.</p>
@@ -351,25 +351,30 @@ type:</p>
 to activate it:</p>
 <pre class="input"><code>conda activate aibweek2026</code></pre>
 <p>Depending on your operating system and software version, your prompt
-may show <code>(aib2026)</code> when the environment is active. If it
-does not, you can type:</p>
+may show (aibweek2026) when the environment is active. If your prompt
+does not visibly change, you can type:</p>
 <pre class="input"><code>conda info --envs</code></pre>
 <p>You should see a <code>*</code> next to <code>aibweek2026</code>.</p>
 <p>Now that your new environment has been created, install the packages
 we will need:</p>
-<pre class="input"><code>pip install matplotlib
-pip install numpy
-pip install pandas
-pip install scikit-learn</code></pre>
+<pre class="input"><code>conda install matplotlib
+conda install numpy
+conda install pandas
+conda install scikit-learn</code></pre>
 <div class="section level3">
 <h3 id="data-sets-and-code">Data sets and code<a class="anchor" aria-label="anchor" href="#data-sets-and-code"></a></h3>
 <p>Create a folder on your machine’s hard drive. Make sure you do
-<strong>not</strong> place it in an online directory such as
-OneDrive.</p>
-<p>Download the <a href="https://github.com/RSEjas140/AIBE26_html/tree/main/docs/data/download" class="external-link">data
+<strong>not</strong> place it in an online directory such as OneDrive,
+as cloud-sync folders can sometimes cause path, permission, or
+file-locking problems when working with code and data.</p>
+<p>Download the <a href="https://github.com/RSEjas140/AIBE26_html/tree/main/aib_easter_2026" class="external-link">data
 zip file</a> and unzip it into that folder.</p>
-<p>Open the <code>worked_example.py</code> file, making sure the
-<code>aib2026</code> environment is active, and you are ready to
+<p>There are also a set of raw video files that can be <a href="https://drive.google.com/drive/folders/1QV2WEHle35kPXHyeZQcThD53V2glMy0N?usp=drive_link" class="external-link">downloaded</a>
+and placed into the data folder in a <code>raw_video</code> folder. This
+may take some time and we won’t need them right now so you can just
+leave the download running while we move on.</p>
+<p>Open the AIB_worked_example.ipynb notebook in Jupyter Notebook,
+making sure the aibweek2026 environment is active, and you are ready to
 begin.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete

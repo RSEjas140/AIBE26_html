@@ -358,13 +358,15 @@ means deciding what we want ML to achieve. Ideally, we want to
 such as spotting patterns in massive datasets, performing millions of
 calculations quickly, or consistently applying the same rules without
 fatigue.</p>
-<p>However, computers (and ML) are <strong>not good at
-everything</strong>. They struggle with tasks requiring common sense,
-deep contextual understanding, or handling messy, ambiguous problems
-without clear definitions.</p>
-<p>Just because computers can do things human can’t doesn’t mean they
-can do things human’s find simple; this distinction is not always
-obvious if you’re just starting out.</p>
+<p>However, computers and machine learning systems are not equally
+reliable for all kinds of tasks. They often perform well when the task
+is clearly defined, the inputs and outputs are measurable, and there is
+enough suitable data. They can be much less reliable when a task depends
+on common sense, rich context, ambiguity, or poorly defined goals.</p>
+<p>Just because computers can do some things humans cannot do
+efficiently, that does not mean they can reliably do everything that
+humans find easy. This distinction is not always obvious when you are
+first starting out.</p>
 <p><br></p>
 <p><img src="https://imgs.xkcd.com/comics/tasks.png" alt="Tasks" class="figure"><br><em>“Tasks” by Randall Munroe, <a href="https://xkcd.com/1425" class="external-link">xkcd.com/1425</a>, used under <a href="https://creativecommons.org/licenses/by-nc/2.5/" class="external-link">CC BY-NC
 2.5</a>.</em></p>
@@ -385,7 +387,7 @@ tackling something machines are fundamentally ill-suited to handle.</p>
 <p>A good starting point is accurately defining the problem. We can
 begin by asking…</p>
 </section><section><h2 class="section-heading" id="how-can-we-articulate-the-problem">How Can We Articulate the Problem?<a class="anchor" aria-label="anchor" href="#how-can-we-articulate-the-problem"></a></h2>
-<hr class="half-width"><p>A well-structured ML problem should be:</p>
+<hr class="half-width"><p>A ML problem should be:</p>
 <ul><li>
 <strong>Clear</strong>: The question should use precise, unambiguous
 language that explicitly defines the objective.</li>
@@ -409,6 +411,20 @@ harm.</li>
 scope, reproducibility, or specific project priorities, may also be
 important. If you’re unsure, don’t hesitate to ask for guidance.</p>
 </blockquote>
+<div id="ethics-should-not-be-treated-as-an-optional-technical-requirement" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="ethics-should-not-be-treated-as-an-optional-technical-requirement" class="callout-inner">
+<h3 class="callout-title">💡 “Ethics should not be treated as an optional technical requirement”</h3>
+<div class="callout-content">
+<p>A project might be fit all of our other measures and still be
+inappropriate or harmful. For that reason, ethical reflection should be
+treated as a separate, ongoing consideration throughout problem
+definition.</p>
+</div>
+</div>
+</div>
 <p>We can consider some examples to better understand why these factors
 are important.</p>
 <p><br></p>
@@ -429,7 +445,8 @@ are important.</p>
 task.<br></li>
 <li>“Diseases in crops” is broad – which disease? which crops?<br></li>
 <li>It’s difficult to interpret and action meaningfully.</li>
-<li>This isn’t a bad ‘starting place’ just a bad ‘finishing place’</li>
+<li>This is not a bad starting place, but it is a bad finishing
+place.</li>
 </ul></div>
 </div>
 </div>
@@ -584,7 +601,7 @@ community<br>
 <p><br></p>
 </div>
 <div class="section level3">
-<h3 id="be-mindfull">Be mindfull<a class="anchor" aria-label="anchor" href="#be-mindfull"></a></h3>
+<h3 id="be-mindful">Be mindful<a class="anchor" aria-label="anchor" href="#be-mindful"></a></h3>
 <p>These are the kinds of considerations you need to make when defining
 your problem. One important thing to keep in mind…</p>
 <div id="just-because-you-can-doesnt-mean-you-should" class="callout discussion">
@@ -819,7 +836,7 @@ reflect current behaviours.</p>
 </button>
 <div id="collapseSpoiler13" class="accordion-collapse collapse" aria-labelledby="headingSpoiler13" data-bs-parent="#accordionSpoiler13">
 <div class="accordion-body">
-<ul><li>Is there meta data explaining the columns and values?</li>
+<ul><li>Is there metadata explaining the columns and values?</li>
 <li>Are the units, formats, and variable names clearly defined?</li>
 <li>Is the treatment of missing values transparent?</li>
 </ul><blockquote>
@@ -1040,18 +1057,19 @@ workflow.</p>
 <p>If you are mainly trying to answer questions like:</p>
 <ul><li>What happened?</li>
 <li>What patterns can I see?</li>
-<li>How do these groups differ?</li>
-<li>Are there missing values, errors, or unusual cases?</li>
-<li>What does this dataset tell me?</li>
-</ul><p>then you are probably interested in <strong>data
+<li>How do groups or variables differ?</li>
+</ul><p>then you are probably starting with <strong>data
 analysis</strong>.</p>
 <p>If you are mainly trying to answer questions like:</p>
 <ul><li>Can I predict an outcome for a new case?</li>
-<li>Can I automatically assign labels to examples?</li>
-<li>Can I detect patterns too large or complex to code by hand?</li>
-<li>Can I build a system that improves its performance from data?</li>
-</ul><p>then you are probably moving into <strong>machine
-learning</strong>.</p>
+<li>Can I classify this image, text, or sound automatically?</li>
+<li>Can I detect patterns that would be difficult to define
+manually?</li>
+</ul><p>then <strong>machine learning</strong> may be useful.</p>
+<p>These are not completely separate categories. Many real projects
+begin with data analysis to understand the data, check quality, and
+define the problem more clearly before deciding whether machine learning
+is appropriate.</p>
 <p>If you are talking more broadly about systems that make decisions,
 generate content, reason over information, or combine multiple
 techniques, then you may be discussing <strong>AI</strong>.</p>
@@ -1184,8 +1202,9 @@ model.</p>
 </ul></div>
 <div class="section level4">
 <h4 id="labels"><strong>Labels</strong><a class="anchor" aria-label="anchor" href="#labels"></a></h4>
-<p>Labels are the <strong>answers you’re trying to predict or
-explain</strong>.</p>
+<p>Labels are the the known target value associated with each example in
+the training data, we can often think of them as the <strong>answers
+you’re trying to predict or explain</strong>.</p>
 <p><strong>Examples:</strong></p>
 <ul><li>The type of flower (iris setosa, iris virginica, etc.)<br></li>
 <li>Whether a patient has a disease</li>
@@ -1232,8 +1251,10 @@ your entire project.</p>
 <div class="section level3">
 <h3 id="supervised-learning"><strong>Supervised Learning</strong><a class="anchor" aria-label="anchor" href="#supervised-learning"></a></h3>
 <p><br></p>
-<p>You already <strong>have the answers</strong> (the labels). The goal
-is to teach the model to predict the correct label given new data.</p>
+<p><strong>You already have known target values for your training
+examples</strong>. The goal is to train a model that learns the
+relationship between the inputs and those targets so it can predict the
+target for new data.</p>
 <p><strong>Example:</strong> - A botanist has recorded the length and
 width of flower petals and also classified each flower’s species.<br>
 - Your question: <em>Can we predict the species of flower based on petal
@@ -1248,8 +1269,9 @@ inputs.</li>
 <div class="section level3">
 <h3 id="unsupervised-learning"><strong>Unsupervised Learning</strong><a class="anchor" aria-label="anchor" href="#unsupervised-learning"></a></h3>
 <p><br></p>
-<p>You <strong>do not have labels</strong>. The goal here is to explore
-your data and uncover hidden patterns or groupings.</p>
+<p><strong>You do not have known target labels</strong>. The goal is to
+explore the structure of the data itself, for example by finding groups,
+simplifying complex datasets, or identifying useful patterns.</p>
 <p><strong>Example:</strong> - You measured the length and width of many
 flower petals from a region, but don’t know their species.<br>
 - Your question: <em>Can we find natural groupings (clusters) in the
