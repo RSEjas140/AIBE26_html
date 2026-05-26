@@ -235,7 +235,6 @@ what is the difference?)</a></li>
 <li><a href="#lets-consider-an-example">Let’s consider an Example</a></li>
 <li><a href="#a-balanced-way-to-think-about-it">A balanced way to think about it</a></li>
 <li><a href="#what-does-success-look-like">What does success look like?</a></li>
-<li><a href="#framing-your-problem">Framing your Problem</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#this-afternoon-you-will-introduce-yourself-and-your-problem-officially.">This afternoon you will introduce yourself and your problem
 officially.</a></li>
@@ -303,7 +302,7 @@ officially.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Problem Definition</h1>
-        <p>Last updated on 2026-05-11 |
+        <p>Last updated on 2026-05-20 |
 
         <a href="https://github.com/RSEjas140/AIBE26_html/edit/main/episodes/01-problem-definition.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -345,47 +344,26 @@ tasks</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>In the previous session, we explored (and ideally ran) a working
-example of a machine learning (ML) project. This provided a sense of
-what ML can do and the typical stages involved in building, training and
-evaluating a ML model.</p>
-<p>Now, we take a step back and ask: <strong>how do we get to that
-point?</strong></p>
-<p>Before we can build a solution, we need to define the problem. That
-means deciding what we want ML to achieve. Ideally, we want to
-<strong>harness tasks that computers are exceptionally good at</strong>,
-such as spotting patterns in massive datasets, performing millions of
-calculations quickly, or consistently applying automated rules without
-fatigue. But computers can not solve every problem trivially.</p>
+<hr class="half-width"><p>In the previous session, we briefly explored creating a problem
+definition for our worked example.</p>
+<p>Now, we ask: <strong>how do we make sure our problem defintion is
+suitable?</strong></p>
+<p>It is important to realise that before we start building a solution,
+we first need to define the problem.</p>
 <p><br></p>
-<p>For example:</p>
-<ul><li><p>You could ask your phone to <strong>detect duplicate photos in
-your gallery</strong>, even if they’re slightly resized or compressed, a
-task that could take a person days to do accurately by eye
-(<strong>computers are great at precise, large-scale comparisons, humans
-not so much</strong>).</p></li>
-<li><p>But to asking your phone to <strong>pick out the photo that best
-captures the mood of loneliness</strong>, means nothing to your phone
-and is a problem that would require a complex definition and training
-process to achieve (<strong>intuitive for humans, not for
-machines</strong>).</p></li>
-</ul><p>Part of defining your ML problem is considering <strong>whether it
-plays to these computational strengths</strong>, or whether it risks
-tackling something machines are less well suited to handle.</p>
 <p>A good starting point is accurately defining the problem. We can
 begin by asking…</p>
 </section><section><h2 class="section-heading" id="how-can-we-articulate-the-problem">How Can We Articulate the Problem?<a class="anchor" aria-label="anchor" href="#how-can-we-articulate-the-problem"></a></h2>
-<hr class="half-width"><p>A ML problem should be:</p>
-<ul><li>
-<strong>Clear</strong>: The question should use precise, unambiguous
-language that explicitly defines the objective.</li>
-<li>
-<strong>Measurable</strong>: The problem must involve inputs and
+<hr class="half-width"><p>A ML problem should:</p>
+<ul><li>be <strong>Clear</strong>: The question should use precise,
+unambiguous language that explicitly defines the objective.</li>
+<li>be <strong>Measurable</strong>: The problem should involve inputs or
 outputs that are well-defined, observable, and quantifiable.</li>
-<li>
-<strong>Feasible</strong>: The required data should exist (or be
+<li>be <strong>Feasible</strong>: The required data should exist (or be
 collectible), be accessible, and be sufficient in both quality and
 quantity.</li>
+<li>add <strong>Value</strong>: The answer to the question should aim to
+generate some value to offset the resource it is consuming.</li>
 </ul><blockquote>
 <p>This is not an exhaustive checklist. Other factors, such as the
 scope, reproducibility, or specific project priorities, may also be
@@ -679,248 +657,7 @@ be?</p>
 <p>How important is accuracy when comparing your current solution and
 your devised AI/ML solution.</p>
 <p>Need Examples to clarify.</p>
-<hr><hr></section><section><h2 class="section-heading" id="framing-your-problem">Framing your Problem<a class="anchor" aria-label="anchor" href="#framing-your-problem"></a></h2>
-<hr class="half-width"><p>Next it is a good idea to <strong>frame our question</strong>. This
-means working out exactly <strong>what kind of machine learning problem
-we’re trying to solve</strong> so we can communicate it clearly, both to
-ourselves and to others who understand ML.</p>
-<p><br></p>
-<div class="section level3">
-<h3 id="terminology-time">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time"></a></h3>
-<p>Let’s start with two important terms in machine learning:</p>
-<div class="section level4">
-<h4 id="features"><strong>Features</strong><a class="anchor" aria-label="anchor" href="#features"></a></h4>
-<p>Features are the individual pieces of information that you use to
-help make predictions. They are the <strong>inputs</strong> to your
-model.</p>
-<p><strong>Examples:</strong></p>
-<ul><li>The length and width of flower petals<br></li>
-<li>A person’s age, height, and cholesterol level<br></li>
-<li>A pixel value</li>
-</ul></div>
-<div class="section level4">
-<h4 id="labels"><strong>Labels</strong><a class="anchor" aria-label="anchor" href="#labels"></a></h4>
-<p>Labels are the the known target value associated with each example in
-the training data, we can often think of them as the <strong>answers
-you’re trying to predict or explain</strong>.</p>
-<p><strong>Examples:</strong></p>
-<ul><li>The type of flower (iris setosa, iris virginica, etc.)<br></li>
-<li>Whether a patient has a disease</li>
-<li>Is this image a cat?</li>
-</ul></div>
-<div class="section level4">
-<h4 id="also-known-as">📚 Also known as…<a class="anchor" aria-label="anchor" href="#also-known-as"></a></h4>
-<table class="table"><colgroup><col width="43%"><col width="56%"></colgroup><thead><tr><th><strong>ML Term</strong></th>
-<th><strong>Also Called</strong></th>
-</tr></thead><tbody><tr><td>Feature</td>
-<td>Input, variable, independent variable, attribute, predictor,
-<strong>X</strong>
-</td>
-</tr><tr><td>Label</td>
-<td>Target, outcome, response, dependent variable, ground truth, class,
-<strong>y</strong>
-</td>
-</tr></tbody></table><p><br></p>
-</div>
-</div>
-<div class="section level3">
-<h3 id="but-wait-what-if-i-dont-have-labels-in-my-dataset">But wait… what if I don’t have labels in my dataset?<a class="anchor" aria-label="anchor" href="#but-wait-what-if-i-dont-have-labels-in-my-dataset"></a></h3>
-<p>That’s fine, this is a critical question that will start to shape
-your entire project.</p>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="supervised-and-unsupervised-learning-">Supervised and Unsupervised Learning.<a class="anchor" aria-label="anchor" href="#supervised-and-unsupervised-learning-"></a></h3>
-<p>Before we choose an algorithm, we need to answer:</p>
-<p><br></p>
-<div id="are-we-dealing-with-supervised-or-unsupervised-learning" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="are-we-dealing-with-supervised-or-unsupervised-learning" class="callout-inner">
-<h3 class="callout-title">“Are we dealing with supervised or unsupervised learning?”</h3>
-<div class="callout-content">
-<p><img src="fig/begflow.png" alt="Flow Diagram for determining supvervised vs unsupervised" class="figure">.</p>
-</div>
-</div>
-</div>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="supervised-learning"><strong>Supervised Learning</strong><a class="anchor" aria-label="anchor" href="#supervised-learning"></a></h3>
-<p><br></p>
-<p><strong>You already have known target values for your training
-examples</strong>. The goal is to train a model that learns the
-relationship between the inputs and those targets so it can predict the
-target for new data.</p>
-<p><strong>Example:</strong> - A botanist has recorded the length and
-width of flower petals and also classified each flower’s species.<br>
-- Your question: <em>Can we predict the species of flower based on petal
-length and width?</em></p>
-<p>Supervised learning is used when:</p>
-<ul><li>You have data that includes both <strong>inputs (features)</strong>
-and <strong>known outputs (labels)</strong>.</li>
-<li>You want to see how well you can predict a known outcome from the
-inputs.</li>
-</ul><p><br></p>
-</div>
-<div class="section level3">
-<h3 id="unsupervised-learning"><strong>Unsupervised Learning</strong><a class="anchor" aria-label="anchor" href="#unsupervised-learning"></a></h3>
-<p><br></p>
-<p><strong>You do not have known target labels</strong>. The goal is to
-explore the structure of the data itself, for example by finding groups,
-simplifying complex datasets, or identifying useful patterns.</p>
-<p><strong>Example:</strong> - You measured the length and width of many
-flower petals from a region, but don’t know their species.<br>
-- Your question: <em>Can we find natural groupings (clusters) in the
-data that might correspond to different flower species?</em></p>
-<p>Unsupervised learning is used when:</p>
-<ul><li>You only have <strong>input data (features)</strong> and want to
-discover relationships, structures, or clusters that you didn’t know
-about beforehand.</li>
-</ul><p><br></p>
-<hr><p><br></p>
-</div>
-<div class="section level3">
-<h3 id="ok-im-interested-in-supervised-learning-now-what">Ok I’m Interested in Supervised Learning, Now What?<a class="anchor" aria-label="anchor" href="#ok-im-interested-in-supervised-learning-now-what"></a></h3>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="terminology-time-1">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time-1"></a></h3>
-<table class="table"><colgroup><col width="17%"><col width="52%"><col width="30%"></colgroup><thead><tr><th><strong>Label Type</strong></th>
-<th><strong>Description</strong></th>
-<th><strong>Example Values</strong></th>
-</tr></thead><tbody><tr><td>Categorical</td>
-<td>Data divided into distinct groups or categories</td>
-<td>
-<code>['Yes', 'No']</code> or
-<code>['UK', 'France', 'Spain']</code>
-</td>
-</tr><tr><td>Continuous</td>
-<td>Numeric data that can take on any value within a range (measurable
-quantities)</td>
-<td>
-<code>3.5</code>, <code>98.6</code>, <code>12.0</code>,
-<code>4.2</code>
-</td>
-</tr></tbody></table><p><br></p>
-<p>If we are dealing with <strong>supervised learning</strong>, the next
-question is:</p>
-<p><br></p>
-<div id="are-our-labels-describing-categories-or-quantities" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="are-our-labels-describing-categories-or-quantities" class="callout-inner">
-<h3 class="callout-title">“Are our labels describing categories or quantities?”</h3>
-<div class="callout-content">
-<p><img src="fig/supflow.png" alt="Diagram distinguishing classification and regression tasks" class="figure">.</p>
-</div>
-</div>
-</div>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="classification"><strong>Classification</strong><a class="anchor" aria-label="anchor" href="#classification"></a></h3>
-<p><br></p>
-<p>You want to predict <strong>which category</strong> something belongs
-to.</p>
-<p><strong>Example:</strong> - Given features like flower petal length
-and width, predict whether the flower is a <em>setosa</em>,
-<em>versicolor</em>, or <em>virginica</em>.</p>
-<p>Classification is used when:</p>
-<ul><li>Your <strong>labels are categorical</strong> (belonging to distinct
-groups or classes).</li>
-<li>The task is to assign inputs to discrete categories.</li>
-</ul><blockquote>
-<p><strong>Note:</strong><br>
-There are different sub-types of classification (e.g., binary vs
-multiclass vs multilabel) to describe different kinds of
-classification.</p>
-</blockquote>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="regression"><strong>Regression</strong><a class="anchor" aria-label="anchor" href="#regression"></a></h3>
-<p><br></p>
-<p>You want to predict a <strong>numeric value</strong>.</p>
-<p><strong>Example:</strong> - Given petal length, predict the
-<strong>petal width</strong>.</p>
-<p>Regression is used when:</p>
-<ul><li>Your <strong>labels are continuous numerical values</strong>.</li>
-<li>The task is to predict quantities that can take on a range of
-values.</li>
-</ul><p><br></p>
-<hr><p><br></p>
-</div>
-<div class="section level3">
-<h3 id="ok-i-know-im-doing-unsupervised-learning-now-what">Ok I Know I’m Doing Unsupervised Learning, Now What?<a class="anchor" aria-label="anchor" href="#ok-i-know-im-doing-unsupervised-learning-now-what"></a></h3>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="terminology-time-2">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time-2"></a></h3>
-<table class="table"><colgroup><col width="18%"><col width="55%"><col width="26%"></colgroup><thead><tr><th><strong>Unsupervised Task</strong></th>
-<th><strong>Description</strong></th>
-<th><strong>Typical Goal</strong></th>
-</tr></thead><tbody><tr><td>Clustering</td>
-<td>Grouping data points based on similarity (no predefined labels)</td>
-<td>Discover hidden groupings or patterns</td>
-</tr><tr><td>Dimensional Reduction</td>
-<td>Simplifying data by reducing the number of features</td>
-<td>Visualisation or Understanding</td>
-</tr></tbody></table><p><br></p>
-<p>If we are dealing with <strong>unsupervised learning</strong>, the
-next question is:</p>
-<p><br></p>
-<div id="are-we-trying-to-group-similar-things-or-reduce-complexity" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="are-we-trying-to-group-similar-things-or-reduce-complexity" class="callout-inner">
-<h3 class="callout-title">“Are we trying to group similar things, or reduce complexity?”</h3>
-<div class="callout-content">
-<p><img src="fig/wholeflow.png" alt="Diagram showing difference between clustering and dimensionality reduction" class="figure">.</p>
-</div>
-</div>
-</div>
-<p><br></p>
-</div>
-<div class="section level3">
-<h3 id="clustering"><strong>Clustering</strong><a class="anchor" aria-label="anchor" href="#clustering"></a></h3>
-<p><br></p>
-<p>You want to find <strong>groups or clusters</strong> in your
-data.</p>
-<p><strong>Example:</strong> - You analyse a series of petal lengths and
-widths to determine if there are <strong>distinct groups</strong> within
-the data.</p>
-<p>Clustering is used when:</p>
-<ul><li>You have <strong>unlabelled data</strong>.</li>
-<li>You suspect some structure or grouping exists and want the algorithm
-to <strong>discover it for you</strong>.</li>
-</ul><p><br></p>
-</div>
-<div class="section level3">
-<h3 id="dimensionality-reduction"><strong>Dimensionality Reduction</strong><a class="anchor" aria-label="anchor" href="#dimensionality-reduction"></a></h3>
-<p><br></p>
-<p>You want to <strong>simplify your data</strong> by reducing the
-number of features, while preserving important structures or
-relationships.</p>
-<p><strong>Example:</strong> - You have 100’s of features about petals
-you believe they are not all important and you want to
-<strong>reduce</strong> the overall number of features.</p>
-<p>Dimensionality reduction is used when:</p>
-<ul><li>Your dataset has <strong>many features</strong>, and you want to:
-<ul><li>Visualise it more easily</li>
-<li>Reduce noise or redundancy</li>
-<li>Speed up future modelling</li>
-</ul></li>
-</ul><blockquote>
-<p>You can think of it as <strong>compressing data to keep the most
-important patterns</strong>.</p>
-</blockquote>
-<p><br></p>
-</div>
-</section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
+<hr><hr></section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
 <hr class="half-width"><p><br></p>
 <div id="problem-scenario-1" class="callout challenge">
 <div class="callout-square">
@@ -1035,7 +772,7 @@ inconsistencies between data sets.</p>
 <div class="section level3">
 <h3 id="applying-it-to-your-problem">Applying it to your problem<a class="anchor" aria-label="anchor" href="#applying-it-to-your-problem"></a></h3>
 <p><br></p>
-<div id="discussion6" class="callout discussion">
+<div id="discussion3" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1096,6 +833,20 @@ draw.</li>
 </div>
 </div>
 <p><br></p>
+<p>For example:</p>
+<ul><li><p>You could ask your phone to <strong>detect duplicate photos in
+your gallery</strong>, even if they’re slightly resized or compressed, a
+task that could take a person days to do accurately by eye
+(<strong>computers are great at precise, large-scale comparisons, humans
+not so much</strong>).</p></li>
+<li><p>But to asking your phone to <strong>pick out the photo that best
+captures the mood of loneliness</strong>, means nothing to your phone
+and is a problem that would require a complex definition and training
+process to achieve (<strong>intuitive for humans, not for
+machines</strong>).</p></li>
+</ul><p>Part of defining your ML problem is considering <strong>whether it
+plays to these computational strengths</strong>, or whether it risks
+tackling something machines are less well suited to handle.</p>
 <div class="section level3">
 <h3 id="final-note">Final note<a class="anchor" aria-label="anchor" href="#final-note"></a></h3>
 <p><br></p>
@@ -1172,8 +923,8 @@ any links that you are not going to use.
   "url": "https://RSEjas140.github.io/AIBE26_html/01-problem-definition.html",
   "identifier": "https://RSEjas140.github.io/AIBE26_html/01-problem-definition.html",
   "dateCreated": "2026-04-06",
-  "dateModified": "2026-05-11",
-  "datePublished": "2026-05-18"
+  "dateModified": "2026-05-20",
+  "datePublished": "2026-05-26"
 }
 
   </script><script>
