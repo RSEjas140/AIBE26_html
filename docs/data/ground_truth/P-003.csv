@@ -1,4 +1,4 @@
-Eye_starts_closing,Eye_closed,Eye_starts_opening,Eye_open,Blink_type
+Eye_starts_closing,Eye_most_closed_pos,Eye_starts_opening,Eye_open,Blink_type
 301,307,308,321,F
 552,557,558,570,H
 650,655,656,665,H
