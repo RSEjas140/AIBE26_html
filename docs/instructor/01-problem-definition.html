@@ -226,18 +226,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
-<li><a href="#how-can-we-articulate-the-problem">How Can We Articulate the Problem?</a></li>
-<li><a href="#how-do-i-know-if-i-want-data-analysis-machine-learning-or-ai-and-what-is-the-difference">How do I know if I want data analysis, machine learning, or AI? (and
-what is the difference?)</a></li>
-<li><a href="#why-this-distinction-matters">Why this distinction matters</a></li>
-<li><a href="#data-analysis-and-machine-learning-often-work-together">Data analysis and machine learning often work together</a></li>
-<li><a href="#a-useful-question-to-ask">A useful question to ask</a></li>
-<li><a href="#lets-consider-an-example">Let’s consider an Example</a></li>
-<li><a href="#a-balanced-way-to-think-about-it">A balanced way to think about it</a></li>
-<li><a href="#what-does-success-look-like">What does success look like?</a></li>
-<li><a href="#challenges">Challenges</a></li>
-<li><a href="#this-afternoon-you-will-introduce-yourself-and-your-problem-officially.">This afternoon you will introduce yourself and your problem
-officially.</a></li>
+<li><a href="#framing-our-worked-example">Framing our worked example</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -302,7 +291,7 @@ officially.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Problem Definition</h1>
-        <p>Last updated on 2026-06-08 |
+        <p>Last updated on 2026-06-19 |
 
         <a href="https://github.com/RSEjas140/AIBE26_html/edit/main/episodes/01-problem-definition.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -360,8 +349,224 @@ could have a go at solving during this week. A more accurate cartoon for
 additional feature being asked for doesn’t seem to have moved that far
 from the original but the task is much more difficult. That is because
 there are things that are much easier for computers to do</p>
-</section><section><h2 class="section-heading" id="how-can-we-articulate-the-problem">How Can We Articulate the Problem?<a class="anchor" aria-label="anchor" href="#how-can-we-articulate-the-problem"></a></h2>
-<hr class="half-width"><p>A ML problem should:</p>
+</section><section><h2 class="section-heading" id="framing-our-worked-example">Framing our worked example<a class="anchor" aria-label="anchor" href="#framing-our-worked-example"></a></h2>
+<hr class="half-width"><p>Now is a good time to understand the framing of our worked example.
+By this, we mean defining what kind of machine learning problem we have
+performed so we can communicate it clearly, both for ourselves and to
+others who understand this machine learning terminology.</p>
+<p><br></p>
+<div class="section level3">
+<h3 id="terminology-time">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time"></a></h3>
+<p>Let’s clarify two important terms that we have already seen:</p>
+<div class="section level4">
+<h4 id="features"><strong>Features</strong><a class="anchor" aria-label="anchor" href="#features"></a></h4>
+<p>Features are the individual pieces of information that you use to
+help make predictions. They are the <strong>inputs</strong> to your
+model.</p>
+<p><strong>Examples:</strong></p>
+<ul><li>The closing duration of a blink event</li>
+<li>The length and width of flower petals<br></li>
+<li>A person’s age, height, and cholesterol level<br></li>
+<li>A pixel value</li>
+</ul></div>
+<div class="section level4">
+<h4 id="labels"><strong>Labels</strong><a class="anchor" aria-label="anchor" href="#labels"></a></h4>
+<p>Labels are the known target values associated with each example in
+the training data. We can often think of them as the <strong>answers
+you’re trying to predict or explain</strong>.</p>
+<p><strong>Examples:</strong></p>
+<ul><li>The type of blink (half blink, full blink)</li>
+<li>The type of flower (iris setosa, iris virginica, etc.)<br></li>
+<li>Whether a patient has a disease</li>
+<li>Is this image a cat?</li>
+</ul></div>
+<div class="section level4">
+<h4 id="also-known-as">📚 Also known as…<a class="anchor" aria-label="anchor" href="#also-known-as"></a></h4>
+<table class="table"><colgroup><col width="43%"><col width="56%"></colgroup><thead><tr><th><strong>ML Term</strong></th>
+<th><strong>Also Called</strong></th>
+</tr></thead><tbody><tr><td>Feature</td>
+<td>Input, variable, independent variable, attribute, predictor,
+<strong>X</strong>
+</td>
+</tr><tr><td>Label</td>
+<td>Target, outcome, response, dependent variable, ground truth, class,
+<strong>y</strong>
+</td>
+</tr></tbody></table></div>
+</div>
+<div class="section level3">
+<h3 id="what-is-supervised-and-unsupervised-learning">What is Supervised and Unsupervised Learning?<a class="anchor" aria-label="anchor" href="#what-is-supervised-and-unsupervised-learning"></a></h3>
+<p>The worked example we have just completed is a supervised learning
+example. <strong>We had known target values for training
+examples</strong> that we used the features to try and predict. The goal
+was to train a model that learns the relationship between the inputs and
+the outputs so it can predict the target label for new data.</p>
+<p><strong>Supervised learning</strong> is typically used when:</p>
+<ul><li>You have data that includes both <strong>inputs (features)</strong>
+and <strong>known outputs (labels)</strong>.</li>
+<li>You want to see how well you can predict a known outcome from the
+inputs.</li>
+</ul><p><strong>Unsupervised Learning</strong> is typically used when:</p>
+<p><strong>You do not have known target labels</strong>. The goal is to
+explore the structure of the data itself, for example by finding groups,
+simplifying complex datasets, or identifying useful patterns.</p>
+<p><br> There are two very common subclasses of supervised learning. In
+our example we were predicting a specific binary class (half-blink,
+full-blink) but we could also be trying to predict a continous value
+(e.g., the height of a person). These two types of problem are labeled
+as categorical or continuous.</p>
+<p><br></p>
+</div>
+<div class="section level3">
+<h3 id="terminology-time-1">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time-1"></a></h3>
+<table class="table"><colgroup><col width="17%"><col width="52%"><col width="30%"></colgroup><thead><tr><th><strong>Label Type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Values</strong></th>
+</tr></thead><tbody><tr><td>Categorical</td>
+<td>Data divided into distinct groups or categories</td>
+<td>
+<code>['Yes', 'No']</code> or
+<code>['UK', 'France', 'Spain']</code>
+</td>
+</tr><tr><td>Continuous</td>
+<td>Numeric data that can take on any value within a range (measurable
+quantities)</td>
+<td>
+<code>3.5</code>, <code>98.6</code>, <code>12.0</code>,
+<code>4.2</code>
+</td>
+</tr></tbody></table><p>So, we can describe the problem we just looked at as a
+<strong>supervised binary classification problem</strong>. <br></p>
+<p>If we are dealing with <strong>unsupervised learning</strong>, we
+have a different common split:</p>
+<p><br></p>
+</div>
+<div class="section level3">
+<h3 id="terminology-time-2">🕒 Terminology Time<a class="anchor" aria-label="anchor" href="#terminology-time-2"></a></h3>
+<table class="table"><colgroup><col width="18%"><col width="55%"><col width="26%"></colgroup><thead><tr><th><strong>Unsupervised Task</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Typical Goal</strong></th>
+</tr></thead><tbody><tr><td>Clustering</td>
+<td>Grouping data points based on similarity (no predefined labels)</td>
+<td>Discover hidden groupings or patterns</td>
+</tr><tr><td>Dimensional Reduction</td>
+<td>Simplifying data by reducing the number of features</td>
+<td>Visualisation or Understanding</td>
+</tr></tbody></table><p><br></p>
+<div class="section level4">
+<h4 id="simply-are-we-trying-to-group-similar-things-or-reduce-complexity-in-our-dataset">“Simply, are we trying to group similar things, or reduce complexity
+in our dataset?”<a class="anchor" aria-label="anchor" href="#simply-are-we-trying-to-group-similar-things-or-reduce-complexity-in-our-dataset"></a></h4>
+<p>If you want to find <strong>groups or clusters</strong> in your
+data.</p>
+<p><strong>Example:</strong> - If we just had closing duration and
+opening duration we could look for <strong>distinct groups</strong>
+within the data.</p>
+<p>Clustering is used when:</p>
+<ul><li>You have <strong>unlabelled data</strong>.</li>
+<li>You suspect some structure or grouping exists and want the algorithm
+to <strong>discover it for you</strong>.</li>
+</ul><p><br></p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="dimensionality-reduction"><strong>Dimensionality Reduction</strong><a class="anchor" aria-label="anchor" href="#dimensionality-reduction"></a></h3>
+<p><br></p>
+<p>You want to <strong>simplify your data</strong> by reducing the
+number of features, while preserving important structures or
+relationships.</p>
+<p><strong>Example:</strong> - You have 100’s of features about petals
+you believe that some a redundant and you want to
+<strong>reduce</strong> the overall number of features.</p>
+<p>Dimensionality reduction is used when:</p>
+<ul><li>Your dataset has <strong>many features</strong>, and you want to:
+<ul><li>Visualise it more easily</li>
+<li>Reduce noise or redundancy</li>
+<li>Speed up future modelling</li>
+</ul></li>
+</ul><blockquote>
+<p>You can think of it as <strong>compressing data while keeping the
+most important patterns</strong>.</p>
+</blockquote>
+<p>These two sections are not mutually exclusive you may want to reduce
+dimensionality and then look for patterns. Often a problem might start
+with unsupervised learning to create labels that you then go on to use
+in supervised learning. The categories are broad and there are aspects
+of machine learning not covered here. Treat this as a framework to be
+able to discuss about machine learning problems.</p>
+<figure><img src="../fig/wholeflow.png" class="figure mx-auto d-block"></figure></div>
+<div class="section level3">
+<h3 id="unsupervised-example">Unsupervised example<a class="anchor" aria-label="anchor" href="#unsupervised-example"></a></h3>
+<p>In this example, imagine that we only have the blink timing features.
+We know how long each blink took to close and open, but we do not know
+whether each event was labelled as a full blink or a half blink.</p>
+<div class="section level4">
+<h4 id="looking-for-structure-without-labels">Looking for structure without labels<a class="anchor" aria-label="anchor" href="#looking-for-structure-without-labels"></a></h4>
+<p>First, let’s visualise two of our engineered features:</p>
+<ul><li>closing_duration</li>
+<li>opening_duration</li>
+</ul><p>At this stage, we will not use Blink_type. We are simply asking:
+<strong>Do the blink events naturally form any obvious
+groups</strong>?</p>
+<p>```{python}</p>
+<p>plt.figure(figsize=(7, 5))</p>
+</div>
+</div>
+</section><div class="section level1">
+<h1 id="create-a-scatter-plot-using-only-the-duration-features">Create a scatter plot using only the duration features<a class="anchor" aria-label="anchor" href="#create-a-scatter-plot-using-only-the-duration-features"></a></h1>
+<p>plt.scatter(df_blinks_c[“closing_duration”],
+df_blinks_c[“opening_duration”], alpha=0.7)</p>
+<p>plt.xlabel(“Closing duration”) plt.ylabel(“Opening duration”)
+plt.tight_layout() plt.show()</p>
+<pre><code>
+In this plot, each point represents **one blink event**. The position of the point is based only on the timing features. We are not using the blink type labels here, so the plot shows what we might see if we had an unlabelled dataset.
+
+We notice that the points do not split into two very clear groups. Instead, many of the blink events sit in a shared region, with some points spread further away. This suggests that there is **some variation in the blink timing features**, but there is not an obvious visual separation into two distinct clusters.
+
+This is an important part of unsupervised exploration. **Sometimes the data forms clear groups. Sometimes it does not.** Both outcomes are useful, because they help us understand whether the features we have created contain strong structure.
+
+#### Adding the labels back for interpretation
+
+Now let’s make the same plot again, but this time we will use the known blink type to colour the points.
+
+This no longer works as an unsupervised approach anymore, because we are now using the labels for interpretation. However, it is a useful teaching step. It lets us ask: **If we hide the labels during exploration, do the natural patterns in the data line up with the labels we already know?**
+
+```{python}
+
+# Create a scatter plot and colour the points by blink type
+plt.figure(figsize=(7, 5))
+
+for blink_type in sorted(df_blinks_c["Blink_type"].unique()):
+
+    # Keep only rows for one blink type
+    blink_data = df_blinks_c[df_blinks_c["Blink_type"] == blink_type]
+
+    # Plot this blink type
+    plt.scatter(blink_data["closing_duration"], blink_data["opening_duration"], alpha=0.7, label=blink_type)
+
+plt.xlabel("Closing duration")
+plt.ylabel("Opening duration")
+plt.legend(title="Blink type")
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p>Now we can see how the known full and half blink labels match the
+visible structure in the data.</p>
+<p>If full blinks and half blinks formed two clearly separate clouds of
+points, that would suggest these two duration features are enough to
+distinguish the blink types quite easily. However, the colours overlap,
+that tells us the problem is more difficult. It means that some full and
+half blinks have similar closing and opening durations.This supports
+what we saw in the supervised learning section: the duration features
+contain some useful information, but they do not perfectly separate full
+blinks from half blinks.</p>
+<p>Hopefully this gives you an insight into how we could approach a
+problem when we <strong>do not have labels</strong>. We can begin by
+visualising the features, looking for structure, and asking whether any
+patterns might correspond to meaningful biological or behavioural
+differences.</p>
+<div class="section level2">
+<h2 id="how-can-we-articulate-the-problem">How Can We Articulate the Problem?<a class="anchor" aria-label="anchor" href="#how-can-we-articulate-the-problem"></a></h2>
+<p>A ML problem should:</p>
 <ul><li>be <strong>Clear</strong>: The question should use precise,
 unambiguous language that explicitly defines the objective.</li>
 <li>be <strong>Measurable</strong>: The problem should involve inputs or
@@ -405,7 +610,7 @@ are important.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> ❓ What might we want to change? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <ul><li>The task is vague – “look at” doesn’t describe a specific ML
 task.<br></li>
@@ -422,7 +627,7 @@ place.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> ✅ What could we add? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>-<strong>“Can we predict the presence of <em>leaf rust</em> in
 <em>wheat crops</em> using <em>drone image data</em>?”</strong></p>
@@ -451,7 +656,7 @@ is?”</strong><a class="anchor" aria-label="anchor" href="#can-we-predict-how-b
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> ❓ What might we change? </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <ul><li>“bad” does not have a precisely defined range<br></li>
 <li>If the output lacks consistent, measurable categories then it is
@@ -465,7 +670,7 @@ unsuitable for model training</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
   <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> ✅ What could we add? </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <ul><li><strong>“Can we classify tumour types from MRI scans (benign vs
 malignant)?”</strong></li>
@@ -495,9 +700,11 @@ malignant)?”</strong></li>
 </div>
 <p><br></p>
 <hr></div>
-</section><section><h2 class="section-heading" id="how-do-i-know-if-i-want-data-analysis-machine-learning-or-ai-and-what-is-the-difference">How do I know if I want data analysis, machine learning, or AI? (and
+</div>
+<div class="section level2">
+<h2 id="how-do-i-know-if-i-want-data-analysis-machine-learning-or-ai-and-what-is-the-difference">How do I know if I want data analysis, machine learning, or AI? (and
 what is the difference?)<a class="anchor" aria-label="anchor" href="#how-do-i-know-if-i-want-data-analysis-machine-learning-or-ai-and-what-is-the-difference"></a></h2>
-<hr class="half-width"><p>These terms are often used together, and sometimes used
+<p>These terms are often used together, and sometimes used
 interchangeably, but they do not all mean exactly the same thing.</p>
 <p>At a simple level:</p>
 <p><strong>Data analysis</strong> is usually when we want to increase
@@ -549,8 +756,10 @@ is appropriate.</p>
 generate content, reason over information, or combine multiple
 techniques, then you may be discussing <strong>AI</strong>.</p>
 </div>
-</section><section><h2 class="section-heading" id="why-this-distinction-matters">Why this distinction matters<a class="anchor" aria-label="anchor" href="#why-this-distinction-matters"></a></h2>
-<hr class="half-width"><p>Not every problem needs machine learning.</p>
+</div>
+<div class="section level2">
+<h2 id="why-this-distinction-matters">Why this distinction matters<a class="anchor" aria-label="anchor" href="#why-this-distinction-matters"></a></h2>
+<p>Not every problem needs machine learning.</p>
 <p>Sometimes the most useful and appropriate outcome is a clear analysis
 of the data, rather than a model. In many projects, the immediate need
 is to understand what is in the dataset, whether it is reliable, and
@@ -568,8 +777,10 @@ require machine learning.</p>
 learning might help. Even if your current goal is data analysis,
 learning how machine learning problems are framed can help you recognise
 when machine learning may become useful later.</p>
-</section><section><h2 class="section-heading" id="data-analysis-and-machine-learning-often-work-together">Data analysis and machine learning often work together<a class="anchor" aria-label="anchor" href="#data-analysis-and-machine-learning-often-work-together"></a></h2>
-<hr class="half-width"><p>It is often helpful to think of data analysis and machine learning as
+</div>
+<div class="section level2">
+<h2 id="data-analysis-and-machine-learning-often-work-together">Data analysis and machine learning often work together<a class="anchor" aria-label="anchor" href="#data-analysis-and-machine-learning-often-work-together"></a></h2>
+<p>It is often helpful to think of data analysis and machine learning as
 related tools rather than competing choices.</p>
 <p>Data analysis is often the place to start. It helps you:</p>
 <ul><li>understand what your variables mean</li>
@@ -588,8 +799,10 @@ it, such as:</p>
 </ul><p>In other words, data analysis often helps you decide whether machine
 learning is appropriate, and machine learning often depends on good data
 analysis to work well.</p>
-</section><section><h2 class="section-heading" id="a-useful-question-to-ask">A useful question to ask<a class="anchor" aria-label="anchor" href="#a-useful-question-to-ask"></a></h2>
-<hr class="half-width"><p>Before deciding what approach you need, ask:</p>
+</div>
+<div class="section level2">
+<h2 id="a-useful-question-to-ask">A useful question to ask<a class="anchor" aria-label="anchor" href="#a-useful-question-to-ask"></a></h2>
+<p>Before deciding what approach you need, ask:</p>
 <blockquote>
 <p>Am I mainly trying to understand the data I already have, or am I
 trying to predict something unknown from it?</p>
@@ -602,8 +815,10 @@ new data, machine learning may be helpful.</p>
 decision-making, language, generation, reasoning, or multiple
 computational techniques, you may be working in the wider area of
 AI.</p>
-</section><section><h2 class="section-heading" id="lets-consider-an-example">Let’s consider an Example<a class="anchor" aria-label="anchor" href="#lets-consider-an-example"></a></h2>
-<hr class="half-width"><p>Consider the difference between these questions:</p>
+</div>
+<div class="section level2">
+<h2 id="lets-consider-an-example">Let’s consider an Example<a class="anchor" aria-label="anchor" href="#lets-consider-an-example"></a></h2>
+<p>Consider the difference between these questions:</p>
 <p><strong>How many patients missed their follow-up
 appointment?</strong> This is mainly a <strong>data analysis</strong>
 question. You are summarising what has already happened.</p>
@@ -615,8 +830,10 @@ predict an outcome for new cases.</p>
 identify at-risk patients and suggest interventions?</strong> This is a
 broader <strong>AI</strong> question. It may include machine learning,
 but it also involves a wider system and a larger task.</p>
-</section><section><h2 class="section-heading" id="a-balanced-way-to-think-about-it">A balanced way to think about it<a class="anchor" aria-label="anchor" href="#a-balanced-way-to-think-about-it"></a></h2>
-<hr class="half-width"><p>You do not need to treat this as a strict either-or choice.</p>
+</div>
+<div class="section level2">
+<h2 id="a-balanced-way-to-think-about-it">A balanced way to think about it<a class="anchor" aria-label="anchor" href="#a-balanced-way-to-think-about-it"></a></h2>
+<p>You do not need to treat this as a strict either-or choice.</p>
 <p>In many real projects:</p>
 <ul><li>
 <strong>data analysis</strong> helps you understand the problem</li>
@@ -656,16 +873,20 @@ label?</li>
 </ul></div>
 </div>
 </div>
-<hr></section><section><h2 class="section-heading" id="what-does-success-look-like">What does success look like?<a class="anchor" aria-label="anchor" href="#what-does-success-look-like"></a></h2>
-<hr class="half-width"><p>Where are you now and what would/does your process look like?</p>
+<hr></div>
+<div class="section level2">
+<h2 id="what-does-success-look-like">What does success look like?<a class="anchor" aria-label="anchor" href="#what-does-success-look-like"></a></h2>
+<p>Where are you now and what would/does your process look like?</p>
 <p>With a magic wand what does the end of this week look like?</p>
 <p>Does the result of your problem definiton get you where you want to
 be?</p>
 <p>How important is accuracy when comparing your current solution and
 your devised AI/ML solution.</p>
 <p>Need Examples to clarify.</p>
-<hr><hr></section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
-<hr class="half-width"><p><br></p>
+<hr><hr></div>
+<div class="section level2">
+<h2 id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
+<p><br></p>
 <div id="problem-scenario-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -698,7 +919,7 @@ data?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>✅ <strong>Supervised Learning</strong><br></li>
 <li>✅ <strong>Regression</strong> — because the task is to predict a
@@ -756,7 +977,7 @@ fertilizer treatments.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>✅ Unsupervised Learning</p>
 <p>✅ Clustering — because the goal is to uncover natural groupings
@@ -805,9 +1026,11 @@ group.</p>
 </div>
 <hr><p><br></p>
 </div>
-</section><section><h2 class="section-heading" id="this-afternoon-you-will-introduce-yourself-and-your-problem-officially-">This afternoon you will introduce yourself and your problem
+</div>
+<div class="section level2">
+<h2 id="this-afternoon-you-will-introduce-yourself-and-your-problem-officially-">This afternoon you will introduce yourself and your problem
 officially.<a class="anchor" aria-label="anchor" href="#this-afternoon-you-will-introduce-yourself-and-your-problem-officially-"></a></h2>
-<hr class="half-width"><ul><li><p>You will have a maximum of <strong>ONE MINUTE</strong> so plan
+<ul><li><p>You will have a maximum of <strong>ONE MINUTE</strong> so plan
 accordingly.</p></li>
 <li><p>Template is in your download folder</p></li>
 <li><p>Focus on introducing yourself (brief) and your problem
@@ -872,7 +1095,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
-</section></div> <!-- / div.lesson-content -->
+</div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/00-worked-example.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -930,8 +1158,8 @@ any links that you are not going to use.
   "url": "https://RSEjas140.github.io/AIBE26_html/instructor/01-problem-definition.html",
   "identifier": "https://RSEjas140.github.io/AIBE26_html/instructor/01-problem-definition.html",
   "dateCreated": "2026-04-06",
-  "dateModified": "2026-06-08",
-  "datePublished": "2026-06-17"
+  "dateModified": "2026-06-19",
+  "datePublished": "2026-06-22"
 }
 
   </script><script>
